@@ -2,30 +2,30 @@ import React from "react";
 import WebD from "../../images/WebD.svg";
 import Music from "../../images/Music.svg";
 import {
-  WorkContainer,
+  SkillsContainer,
   Heading,
-  WorkWrapper,
-  WorkCard,
-  WorkIcon,
-  WorkContent
-} from "./WorkBG";
+  SkillsWrapper,
+  SkillsCard,
+  SkillsIcon,
+  SkillsContent
+} from "./SkillsBG";
 
-function Work() {
+function Skills() {
   return (
     <>
-      <WorkContainer id="work">
-        <Heading>My Work</Heading>
-        <WorkWrapper>
-          <WorkCard>
-            <WorkIcon src={WebD} />
-            <WorkContent>
+      <SkillsContainer id="work">
+        <Heading>My Skills</Heading>
+        <SkillsWrapper>
+          <SkillsCard>
+            <SkillsIcon src={WebD} />
+            <SkillsContent>
               I've been trying my hands on Competitive Programming and have also
               done couple of projects using Node, Express, MongoDB and React.
-            </WorkContent>
-          </WorkCard>
-          <WorkCard>
-            <WorkIcon src={Music} />
-            <WorkContent>
+            </SkillsContent>
+          </SkillsCard>
+          <SkillsCard>
+            <SkillsIcon src={Music} />
+            <SkillsContent>
               I'm also a Music Producer sharing some raw music and vibes with
               you all. You can checkout my tracks on my{" "}
               <a href="https://www.youtube.com/channel/UCuF2JnVgn_7o3IQ0pDgAIxQ">
@@ -36,12 +36,12 @@ function Work() {
                 Spotify
               </a>
               .
-            </WorkContent>
-          </WorkCard>
-        </WorkWrapper>
-      </WorkContainer>
+            </SkillsContent>
+          </SkillsCard>
+        </SkillsWrapper>
+      </SkillsContainer>
     </>
   );
 }
 
-export default Work;
+export default Skills;

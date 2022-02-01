@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const FormContainer = styled.div`
-  /* background: #000; */
+  background: #000;
   margin: 0 auto;
   position: relative;
   height: 100vh;
@@ -31,6 +31,10 @@ export const VideoBG = styled.div`
   height: 100%;
   width: 100%;
   overflow: hidden;
+
+  @media screen and (min-width: 992px) {
+    display: none;
+  }
 `;
 
 export const ContactVideo = styled.video`

@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { Route, Routes, useLocation } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "../pages/Home";
 import ContactMe from "../pages/ContactMe";
-import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
-import { css } from "@emotion/react";
+import { AnimatePresence } from "framer-motion";
+import Loader from "./Loader";
 
 export default function App() {
   const [loading, setLoading] = useState(false);
@@ -15,29 +15,20 @@ export default function App() {
     }, 2500);
   }, []);
 
-  const override = css`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    height: 100vh;
-  `;
+  let location = useLocation();
 
   return (
-    <Router>
+    <>
       {loading ? (
-        <ClimbingBoxLoader
-          color={"#000"}
-          css={override}
-          loading={loading}
-          size={30}
-        />
+        <Loader />
       ) : (
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/ContactMe" element={<ContactMe />} />
-        </Routes>
+        <AnimatePresence exitBeforeEnter>
+          <Routes location={location} key={location.pathname}>
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/ContactMe" element={<ContactMe />} />
+          </Routes>
+        </AnimatePresence>
       )}
-    </Router>
+    </>
   );
 }

@@ -4,7 +4,9 @@ import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import About from "../components/About/about";
 import Contact from "../components/Contact/contact";
-import Work from "../components/Work/work";
+import Skills from "../components/Skills/Skills";
+import { motion } from "framer-motion";
+import { animationOne, transition } from "../components/Animation";
 
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,14 +14,20 @@ const Home = () => {
     setIsOpen(!isOpen);
   };
   return (
-    <>
+    <motion.div
+      initial="out"
+      animate="in"
+      exit="out"
+      variants={animationOne}
+      // transition={transition}
+    >
       <Sidebar isOpen={isOpen} toggle={toggle} />
       <Navbar toggle={toggle} />
       <Background />
       <About />
-      <Work />
+      <Skills />
       <Contact />
-    </>
+    </motion.div>
   );
 };
 

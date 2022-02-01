@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Form.css";
 import FormSignup from "./FormSignup";
 import {
@@ -11,11 +11,6 @@ import {
 import Video from "../../images/Matrix.mp4";
 
 const Form = () => {
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  function submitForm() {
-    setIsSubmitted(true);
-  }
   return (
     <>
       <FormContainer>
@@ -36,7 +31,7 @@ const Form = () => {
             alt="spaceship"
           />
         </ContentLeft>
-        {!isSubmitted ? <FormSignup submitForm={submitForm} /> : null}
+        <FormSignup />
       </FormContainer>
     </>
   );

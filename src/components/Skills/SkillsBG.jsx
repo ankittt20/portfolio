@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const WorkContainer = styled.div`
+export const SkillsContainer = styled.div`
   box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
     0 14px 19px 0 rgba(0, 0, 0, 0.07);
 
@@ -33,11 +33,11 @@ export const Heading = styled.h1`
   font-family: "Prata";
   @media screen and (max-width: 992px) {
     font-size: 4rem;
-    margin: 4% 0 7% 62%;
+    margin: 4% 0 7% 60%;
   }
 `;
 
-export const WorkWrapper = styled.div`
+export const SkillsWrapper = styled.div`
   max-width: 90%;
   margin: 0 auto;
   display: grid;
@@ -53,7 +53,7 @@ export const WorkWrapper = styled.div`
   }
 `;
 
-export const WorkCard = styled.div`
+export const SkillsCard = styled.div`
   background: #f3f1f5;
   display: flex;
   flex-direction: column;
@@ -71,13 +71,13 @@ export const WorkCard = styled.div`
   }
 `;
 
-export const WorkIcon = styled.img`
+export const SkillsIcon = styled.img`
   height: 300px;
   width: 70%;
   margin-bottom: 10px;
 `;
 
-export const WorkContent = styled.p`
+export const SkillsContent = styled.p`
   text-align: center;
   font-size: 1.1rem;
   margin: 0 3%;
