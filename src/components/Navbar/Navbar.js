@@ -55,7 +55,7 @@ function Navbar({ toggle }) {
                 duration={100}
                 exact="true"
               >
-                Work
+                Skills
               </NavLinks>
             </NavItem>
             <NavItem>
