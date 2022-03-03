@@ -1,7 +1,14 @@
 import React from "react";
-import { Animation, Heading, Content, HomeVideo } from "./BgElements";
+import {
+  Animation,
+  Heading,
+  Content,
+  HomeVideo,
+  HomeImage
+} from "./BgElements";
 import "../../styles.css";
 import Video from "../../images/Developer.mp4";
+import Developer from "../../images/Developer.png";
 import { motion } from "framer-motion";
 import { animationOne, transition } from "../Animation";
 
@@ -26,8 +33,8 @@ function Background() {
               creating engaging UI, bringing products to life.
             </Content>
           </motion.div>
-
-          <HomeVideo autoPlay loop muted src={Video} type="video/mp4" />
+          <HomeImage src={Developer} />
+          {/* <HomeVideo autoPlay loop muted src={Video} type="video/mp4" /> */}
 
           <div className="area">
             <ul className="circles">

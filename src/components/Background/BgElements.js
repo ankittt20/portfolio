@@ -55,3 +55,19 @@ export const HomeVideo = styled.video`
     margin: 53rem auto 5rem;
   }
 `;
+
+export const HomeImage = styled.img`
+  position: relative;
+  z-index: 10;
+  margin: 5% 0 5% 45%;
+  border-radius: 50px;
+  overflow: hidden;
+  -webkit-transform: translateZ(0);
+  box-shadow: 0 19px 51px 0 rgba(0, 0, 0, 0.16),
+    0 14px 19px 0 rgba(0, 0, 0, 0.07);
+  @media screen and (max-width: 992px) {
+    transition: 0.8s all ease;
+    width: 85%;
+    margin: 53rem auto 5rem;
+  }
+`;
