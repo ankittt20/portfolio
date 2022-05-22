@@ -21,7 +21,7 @@ export default function Loader() {
 
   return (
     <ClimbingBoxLoader
-      color={"#000"}
+      color={"#fff"}
       css={override}
       loading={loading}
       size={30}

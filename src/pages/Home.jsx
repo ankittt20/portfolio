@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Background from "../components/Background/Background.js";
+import Background from "../components/Hero/Hero.js";
 import Navbar from "../components/Navbar/Navbar";
 import Sidebar from "../components/Sidebar/Sidebar";
 import About from "../components/About/about";
